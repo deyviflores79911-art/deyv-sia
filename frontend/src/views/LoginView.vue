@@ -37,7 +37,7 @@
         </h2>
 
         <p>
-          Ingrese sus credenciales institucionales
+          Ingrese sus credenciales institucionales (version 2)
           para acceder al sistema.
         </p>
 
