@@ -314,3 +314,48 @@ MAILERS = {
             'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+# ==========================================================
+# SERVIDOR (VM2 sia-app): PostgreSQL detras de Nginx
+# ==========================================================
+# Solo se activa si el servidor define DB_ENGINE=postgresql
+# en /opt/sia/.env. En la PC de desarrollo sigue usando SQLite.
+
+if os.environ.get('DB_ENGINE') == 'postgresql':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ['DB_NAME'],
+            'USER': os.environ['DB_USER'],
+            'PASSWORD': os.environ['DB_PASSWORD'],
+            'HOST': os.environ['DB_HOST'],
+            'PORT': os.environ['DB_PORT'],
+            'CONN_MAX_AGE': 60,
+        }
+    }
+    STATIC_URL = '/static/'
+    STATIC_ROOT = '/opt/sia/static'
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+# ==========================================================
+# SERVIDOR (VM2 sia-app): PostgreSQL detras de Nginx
+# ==========================================================
+# Solo se activa si el servidor define DB_ENGINE=postgresql
+# en /opt/sia/.env. En la PC de desarrollo sigue usando SQLite.
+
+if os.environ.get('DB_ENGINE') == 'postgresql':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ['DB_NAME'],
+            'USER': os.environ['DB_USER'],
+            'PASSWORD': os.environ['DB_PASSWORD'],
+            'HOST': os.environ['DB_HOST'],
+            'PORT': os.environ['DB_PORT'],
+            'CONN_MAX_AGE': 60,
+        }
+    }
+    STATIC_URL = '/static/'
+    STATIC_ROOT = '/opt/sia/static'
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

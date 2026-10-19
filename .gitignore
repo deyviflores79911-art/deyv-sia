@@ -1,0 +1,15 @@
+# Python
+backend/.venv/
+.venv/
+__pycache__/
+*.pyc
+backend/db.sqlite3
+.env
+
+# Archivos subidos por los usuarios (viven en cada servidor)
+backend/media/
+
+# Frontend
+frontend/node_modules/
+node_modules/
+frontend/dist/
