@@ -72,4 +72,4 @@ Observaciones
 Las cuentas están activas en la base de datos local backend/db.sqlite3. Se generan/actualizan con python manage.py cargar_usuarios_prueba (además de cargar_permisos_sigta para roles y permisos).
 Las contraseñas fueron configuradas para pruebas y deben cambiarse antes de una implementación real.
 Si la base de datos no se copia a otra instalación, estas cuentas no existirán automáticamente hasta correr los comandos de carga.
-Las contraseñas se almacenan con Argon2id (no en texto plano); este archivo es solo para pruebas locales.
+Las contraseñas se almacenan con Argon2id (no en texto plano); este archivo es solo para pruebas locales.     ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,PROBANDO EL CAMBIO
